@@ -1,7 +1,7 @@
 
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
-// import LineChart from "../../components/LineChart";
+
 
 const subtitleText = `Welcome to NEXUS News – in this we created a system to manage and analyze news data in real time. The system will extract events from news data and use NLP and machine learning to identify key entities and sentiments, constructing a dynamic network graph that illustrates the connections between different events. This interactive graph will allow users to explore relationships, with a focus on scalability and performance to handle large volumes of data.:<br><br>
 

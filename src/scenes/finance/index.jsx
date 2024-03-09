@@ -6,7 +6,6 @@
 //   )
 // }
 
-// export default index
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, useTheme } from "@mui/material";
 import Header from "../../components/Header";

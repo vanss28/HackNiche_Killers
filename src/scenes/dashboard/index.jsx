@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-// MUI imports
 import { Box, Typography, useTheme } from "@mui/material";
+import { tokens } from "../../theme"; 
+import Header from "../../components/Header"; 
 
-// Theme imports
-import { tokens } from "../../theme"; // Assuming this is the correct path to your tokens
-
-// Component imports
-import Header from "../../components/Header"; // Uncomment if Header is used
-// Other commented imports can go here if they are needed later
 
 
 const Dashboard = () => {
@@ -20,7 +15,6 @@ const Dashboard = () => {
   const [newsBoxThree, setNewsBoxThree] = useState([]);
 
   
-    // Fetch data for the first box
     useEffect(() => {
       const fetchData = async (setState) => {
         const apiKey = 'c10ab2406e674cac8e34a056ce6ccf8a'
@@ -28,7 +22,7 @@ const Dashboard = () => {
         try {
           const response = await fetch(url);
           const data = await response.json();
-          setState(data.articles.slice(0, 3)); // Get the top 3 articles
+          setState(data.articles.slice(0, 3)); 
         } catch (error) {
           console.error('Error fetching news for box one:', error);
         }
@@ -36,14 +30,14 @@ const Dashboard = () => {
       fetchData(setNewsBoxOne);
     }, []);
   
-    // Fetch data for the second box
+    
     useEffect(() => {
       const fetchData = async (apiKey, setState) => {
         const url = `https://newsapi.org/v2/everything?q=entertainment&apiKey=${apiKey}`;
         try {
           const response = await fetch(url);
           const data = await response.json();
-          setState(data.articles.slice(0, 3)); // Get the top 3 articles
+          setState(data.articles.slice(0, 3)); 
         } catch (error) {
           console.error('Error fetching news for box two:', error);
         }
@@ -51,14 +45,14 @@ const Dashboard = () => {
       fetchData('c10ab2406e674cac8e34a056ce6ccf8a', setNewsBoxTwo);
     }, []);
   
-    // Fetch data for the third box
+    
     useEffect(() => {
       const fetchData = async (apiKey, setState) => {
         const url = `https://newsapi.org/v2/everything?q=business&apiKey=${apiKey}`;
         try {
           const response = await fetch(url);
           const data = await response.json();
-          setState(data.articles.slice(0, 3)); // Get the top 3 articles
+          setState(data.articles.slice(0, 3)); 
         } catch (error) {
           console.error('Error fetching news for box three:', error);
         }
@@ -69,13 +63,13 @@ const Dashboard = () => {
   return (
     <>
     <Box m="20px">
-      {/* HEADER */}
+     
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="HOME" />
 
        </Box>
 
-      {/* GRID & CHARTS */}
+     
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
