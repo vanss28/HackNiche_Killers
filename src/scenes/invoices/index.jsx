@@ -7,7 +7,9 @@ import { tokens } from "../../theme";
 const Index = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState([]); 
+
+  
 
  
     useEffect(() => {
