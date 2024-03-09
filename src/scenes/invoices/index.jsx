@@ -12,7 +12,7 @@ const Index = () => {
  
     useEffect(() => {
       const fetchData = async () => {
-        const apiKey = '6875b6d9039a44c8af55c54dd57f9484'; 
+        const apiKey = 'c10ab2406e674cac8e34a056ce6ccf8a'; 
         const country = 'in'; 
         const category = 'politics'; 
         const pageSize = 17; 

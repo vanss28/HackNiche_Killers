@@ -23,7 +23,7 @@ const Dashboard = () => {
     // Fetch data for the first box
     useEffect(() => {
       const fetchData = async (setState) => {
-        const apiKey = '6875b6d9039a44c8af55c54dd57f9484'
+        const apiKey = 'c10ab2406e674cac8e34a056ce6ccf8a'
         const url = `https://newsapi.org/v2/everything?q=stocks&apiKey=${apiKey}`;
         try {
           const response = await fetch(url);
@@ -48,7 +48,7 @@ const Dashboard = () => {
           console.error('Error fetching news for box two:', error);
         }
       };
-      fetchData('6875b6d9039a44c8af55c54dd57f9484', setNewsBoxTwo);
+      fetchData('c10ab2406e674cac8e34a056ce6ccf8a', setNewsBoxTwo);
     }, []);
   
     // Fetch data for the third box
@@ -63,7 +63,7 @@ const Dashboard = () => {
           console.error('Error fetching news for box three:', error);
         }
       };
-      fetchData('6875b6d9039a44c8af55c54dd57f9484', setNewsBoxThree);
+      fetchData('c10ab2406e674cac8e34a056ce6ccf8a', setNewsBoxThree);
     }, []);
 
   return (
