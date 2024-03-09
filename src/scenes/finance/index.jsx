@@ -1,10 +1,18 @@
+// import React from 'react'
 
+// function index() {
+//   return (
+//     <iframe></iframe>
+//   )
+// }
+
+// export default index
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, useTheme } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
-const Technical = () => {
+const Fin = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [news, setNews] = useState([]);
@@ -14,7 +22,7 @@ const Technical = () => {
       const fetchData = async () => {
         const apiKey = '6875b6d9039a44c8af55c54dd57f9484'; 
         const country = 'in'; 
-        const category = 'technology'; 
+        const category = 'business'; 
         const pageSize = 15; 
         const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&pageSize=${pageSize}&apiKey=${apiKey}`;
         try {
@@ -33,7 +41,7 @@ const Technical = () => {
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="Technological Category" />
+        <Header title="Financial Category" />
       </Box>
 
       <Box
@@ -51,7 +59,7 @@ const Technical = () => {
           style={{ border: '10px', borderRadius: '20px' }}
         >
           <Typography variant="h6" mb={2} fontWeight="bold">
-            Technological News
+            Financial News
           </Typography>
           <ul style={{
             display: 'grid',
@@ -76,5 +84,4 @@ const Technical = () => {
   );
 };
 
-export default Technical;
-
+export default Fin;

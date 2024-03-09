@@ -4,7 +4,7 @@ const PS = () => {
   return (
     <div>
     <div >
-    <iframe className=" h-[90vh] w-[140vh] mx-5" src="http://localhost:8055" frameborder="0"></iframe>
+    <iframe className=" h-[90vh] w-[140vh] mx-5" src="http://localhost:8502" frameborder="0"></iframe>
     </div>
     </div>
   )

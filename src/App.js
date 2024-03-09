@@ -9,6 +9,7 @@ import Contacts from "./scenes/contacts";
 import Bar from "./scenes/bar";
 import Form from "./scenes/form";
 import Line from "./scenes/line";
+import Fin from "./scenes/finance";
 
 import FAQ from "./scenes/faq/index";
 import Geography from "./scenes/geography";
@@ -42,6 +43,8 @@ function App() {
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/sign-in" element={<SignIn />} />
+              <Route path="/finance" element={<Fin/>} />
+
             </Routes>
           </main>
         </div>
